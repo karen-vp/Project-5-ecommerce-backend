@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend de proyecto 5 ecommerce de ropa",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karen-vp/ecommerce-ropa-backend.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "backend",
+    "clothes"
+  ],
+  "author": "Karen Valier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karen-vp/ecommerce-ropa-backend/issues"
+  },
+  "homepage": "https://github.com/karen-vp/ecommerce-ropa-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3"
+  }
+}

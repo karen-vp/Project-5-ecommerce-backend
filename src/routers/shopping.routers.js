@@ -5,8 +5,8 @@ const {getShopping, createShopping, updateShopping, deleteShopping} = require('.
 //CRUD
 //localhost:5000/customers
  router.get('/', getShopping);
- //localhost:5000/shopping
- router.post('/', createShopping);
+ //localhost:5000/shopping/create
+ router.post('/create', createShopping);
 
 
  module.exports = router;

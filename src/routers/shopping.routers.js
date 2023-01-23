@@ -7,9 +7,6 @@ const {getShopping, createShopping, updateShopping, deleteShopping} = require('.
  router.get('/', getShopping);
  //localhost:5000/shopping
  router.post('/', createShopping);
- //localhost:5000/shopping/:id
- router.put('/:id', updateShopping);
-  //localhost:5000/shopping/:id
- router.delete('/:id', deleteShopping);
+
 
  module.exports = router;

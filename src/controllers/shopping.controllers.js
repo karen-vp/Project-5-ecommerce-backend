@@ -13,20 +13,9 @@ const createShopping = (req,res)=>{
     msgFormatConst('createShopping');
   }
 
-  const updateShopping = (req,res)=>{
-    res.send('Estoy actualizando un compra');
-    msgFormatConst('updateShopping ');
-  }
-
-  const deleteShopping = (req,res)=>{
-    res.send('Estoy borrando un compra');
-    msgFormatConst('deleteShopping');
-  }
 
 module.exports = {
     getShopping,
-    createShopping,
-    updateShopping,
-    deleteShopping
+    createShopping
 
 }

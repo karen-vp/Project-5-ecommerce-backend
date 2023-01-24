@@ -14,8 +14,6 @@ router.post('/login', loginCustomer);
 router.get('/verify', auth, verifyCustomer);
 //localhost:5000/customers/update
 router.put('/update', auth, updateCustomer);
-//localhost:5000/customers/:id
-//router.put('/:id', auth,updateCustomer);
 //localhost:5000/customers/delete
 router.delete('/delete', auth, deleteCustomer);
 

@@ -32,6 +32,3 @@ app.use('/customers', require('../src/routers/customers.routers'));
 //localhost:5000/products
 app.use('/products', require('../src/routers/products.routers'))
 
-//localhost:5000/shopping
-app.use('/shopping', require('../src/routers/shopping.routers'));
-

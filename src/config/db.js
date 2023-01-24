@@ -9,7 +9,7 @@ mongoose.set('strictQuery', false)
 const dbConnection = async () => {
 
     try {
-        await mongoose.connect(process.env.MONGODB_URL, {
+        await mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });

@@ -6,7 +6,7 @@ const getProducts = async (req, res) => {
     try {
         const Products = await Product.find({})
         msgFormatConst('getProducts');
-        respApi(res,'success',Products);
+        res.json({Products})
     } catch (error) {
         res.status(500).json({ msg: 'Hubo un error obteniendo los datos' })
     }

@@ -15,6 +15,7 @@ module.exports = (req, res, next)=>{
         const openToken = jwt.verify(token, process.env.SECRET)
 
         //SI TODO ESTÁ CORRECTO, A LA PETICIÓN LE ANCLAMOS UNA PROPIEDAD ADICIONAL CON EL TOKEN DESCIFRADO
+        //user es un valor de openToken que lo asigna el jwt
         req.user = openToken.user
 
         //NEXT, AL INVOCARSE, PERMITE AVANZAR A LA SIGUIENTE FUNCIÓN EN EL BACKEND

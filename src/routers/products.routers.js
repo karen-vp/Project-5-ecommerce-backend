@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const router = Router();
-const {getProducts, createProducts, updateProducts, deleteProducts} = require('../controllers/products.controllers')
+const {getProducts, getSingleProduct, createProducts, updateProducts, deleteProducts} = require('../controllers/products.controllers')
 
 const auth =  require('./../middlewares/authorization')
 
@@ -8,6 +8,8 @@ const auth =  require('./../middlewares/authorization')
 
 //localhost:5000/products/list
 router.get('/list', getProducts);
+
+router.get('/list/:id', getSingleProduct);
 //localhost:5000/products/create
 router.post('/create', createProducts);
 //localhost:5000/products/update

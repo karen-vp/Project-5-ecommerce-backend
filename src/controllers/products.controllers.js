@@ -12,6 +12,16 @@ const getProducts = async (req, res) => {
     }
 }
 
+const getSingleProduct = async (req,res)=>{
+    try {
+        const singleProduct = await Product.findById(req.params.id)
+        msgFormatConst('getSingleProducts');
+        res.json({singleProduct})
+    } catch (error) {
+        res.status(500).json({ msg: 'Hubo un error obteniendo los datos' })
+    }
+}
+
 //CREATE
 const createProducts = async (req, res) => {
     const { name, brand, price, description, img } = req.body
@@ -51,6 +61,7 @@ const deleteProducts = async (req, res) => {
 
 module.exports = {
     getProducts,
+    getSingleProduct,
     createProducts,
     updateProducts,
     deleteProducts

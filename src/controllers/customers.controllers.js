@@ -32,27 +32,7 @@ const createCustomer = async (req, res) => {
     const Customers = await Customer.create({
       name, email, password: hashedPassword
     })
-    // //USUARIO CREADO, VAMOS A CREAR EL JSON WEB TOKEN
-    // const payload = {
-    //   user: {
-    //     id: Customers._id //ID DEL USUARIO QUE QUIERO CREAR
-    //   }
-    // }
-    // //FIRMAR EL JSON WEB TOKEN
-    // jwt.sign(
-    //   payload,//DATOS QUE SE ACOMPAÑAN EN EL TOKEN
-    //   process.env.SECRET,//LLAVE PARA DESCIFRAR LA FIRMA ELECTRONICA DEL TOKEN
-    //   {
-    //     expiresIn: 360000 //EXPIRACIÓN DEL TOKEN
-    //   },
-    //   (error, token) => {
-    //     //CALLBACK QUE, EN CASO DE QUE EXISTA ERROR, DEVUELVA EL TOKEN
-    //     if (error) throw error
-    //     res.json({ token })
-    //   }
-    // )
-    // //helpers.js
-    
+       
     msgFormatConst('createCustomers');
     return res.status(200).json({
       msg: 'Usuario creado',

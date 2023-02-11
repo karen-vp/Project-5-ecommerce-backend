@@ -52,8 +52,11 @@ const createCustomer = async (req, res) => {
     //   }
     // )
     // //helpers.js
+    
     msgFormatConst('createCustomers');
-
+    return res.status(200).json({
+      msg: 'Usuario creado',
+    })
   } catch (error) {
     return res.status(400).json({
       msg: error,
